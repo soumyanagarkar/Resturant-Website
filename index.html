@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
 <title>CSS Website Layout</title>
@@ -92,4 +92,268 @@ a last call reminder is given approximately 15mins prior to closing.
 
 
 </body>
+</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  text-align: center;
+  background-color: gold;
+  font-family: Verdana, sans-serif;
+  
+  
+}
+  
+  pre.solid 
+  {
+    border-style: solid;
+    border-width: 1px;
+    max-width: 2000px;
+    margin:0px 100px 0px 100px;
+  }
+
+/* Style the header */
+.header {
+  background-color: gold
+  padding: 20px;
+  text-align: center;
+  
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color:black;
+  }
+  
+  /* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+  
+  
+  
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+ height:
+  
+  
+  
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  
+  margin-top:200px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+  .prev{
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 5px;
+  width: 5px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 50px) {
+  .prev, .next,.text {font-size: 11px}
+}
+  
+  
+ </style>
+  
+<body>
+</head>
+  
+<body>
+<div class="header">
+        <h1  text-align:"center"; font-family: "Garamond, serif">
+            Food Fantasy
+
+        </h1>
+      <p font-family: "Verdana, sans-serif";><strong>Where every flavour tells a story!</strong>
+    </div>
+
+
+<div class="topnav">
+  <a href="#">Resturant Menu</a>
+  <a href="#">Gallery</a>
+  <a href="#">Reservation</a>
+</div>
+ 
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="https://i.postimg.cc/Hn8zMrL4/Whats-App-Image-2024-06-28-at-11-16-44-PM.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="https://i.postimg.cc/HjG29TcG/Whats-App-Image-2024-06-28-at-11-17-36-PM.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="https://i.postimg.cc/02DRRQCw/Whats-App-Image-2024-06-28-at-11-18-27-PM.jpg" style="width:100%">
+  
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+ 
+
+</body>    
+ 
+  <h2>Served Everyday Since 1990</h2>
+    <pre>
+<strong>At Food Fantasy,</s> we believe the best dishes are the ones that remind you of childhood 
+You will find the best dishes you didn't know you craved: extra-creamy mac and,
+hot chicken casserole, fried dumplings like your mama makes, and many more
+Forget about the daily stress and come relax with us. After tasting any of our menu 
+items, you will never want to leave!
+</pre>
+    </div>
+  
+
+
+    
+
+  
+<h2>Hours & Location</h2> 
+  <pre class="solid" text-self:center>
+  
+  Monday - Friday : 8.00 am - 11.00 pm
+ Saturday - Sunday : 8.00 pm - 12.00 pm
+
+  517 AMSTERDAM AVE NEW YORK, NY 1002 
+INFO@Foodfantasy.COM
+   
+ Free Home delivery available 
+ 
+</pre>
+  
+
+
+</body>
 </html>
+
